@@ -8,6 +8,150 @@
  * You're free to add application-wide styles to this file and they'll appear at the top of the
  * compiled file, but it's generally better to create a new file per style scope.
  *
+ *= require animate.css
  *= require_self
  *= require_tree .
  */
+
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require animate.css
+ *= require_self
+ *= require_tree .
+ */
+
+html { 
+  height: 100%; 
+}
+
+body { 
+  height: 100%; 
+  margin: 0 auto;
+  position: relative;
+  text-align: center;
+  color: #2F3738;
+}
+
+#map-canvas { 
+  height: 100%; 
+  opacity: .3;
+}
+
+.content {
+  z-index: 10;
+  position: relative;
+  margin: 0 auto;
+  border-bottom: 1px solid #686868;
+  background-image: url('food_truck.png');
+  background-size: cover;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+  letter-spacing: 2px;
+  font-size: 20px;
+  overflow: hidden;
+}
+
+input {
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #595959;
+  font-size: 20px;
+  letter-spacing: 2px;
+  background-color: transparent;
+}
+
+.field {
+  position: relative;
+  top: 10px;
+  margin-bottom: 10px;
+}
+
+#address {
+  width: 300px;
+}
+
+#miles {
+  width: 50px;
+}
+
+button {
+  border: 5px solid #e86868;
+  transition: background-color 0.3s ease,
+              border 0.3s ease,
+              color 0.3s ease;
+  background-color: transparent;
+  padding: 15px;
+  font-size: 16px;
+  outline: none;
+}
+
+button:hover {
+  background-color: #e86868;
+  border-radius: 10px;
+  cursor: pointer;
+  color: #fafafa;
+}
+
+.form-container {
+  display: inline-block;
+  padding: 30px;
+  text-align: center;
+}
+
+h1 {
+  margin-top: auto;
+  font-family: 'Sail', cursive;
+  text-shadow: 4px 4px rgba(229, 117, 117, 0.3);
+}
+
+/*displays search results in bottom right corner*/
+.result {
+  position: absolute; 
+  bottom: -38px; /* - height of div */ 
+  padding: 10px;
+  z-index: 10;
+  background-color: rgba(255,255,255,.5);
+  font-size: 15px;
+}
+
+.back-arrow {
+  position: absolute;
+  transition: background-color 0.3s ease;
+  background-color: rgba(255,255,255,.7);
+  z-index: 15;
+  left: 50%;
+  width: 200px;
+  margin-left: -100px;
+  font-size: 52px;
+  padding-top: 20px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  height: 80px;
+  top: -100px; /* out of view at first */
+}
+
+.back-arrow:hover {
+  background-color: rgba(255,255,255,1);
+}
+
+.new-search {
+  display: block;
+  font-size: 12px;
+  padding-bottom: 5px;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
