@@ -66,7 +66,7 @@ FoodTruckFinder.Views.Index = Backbone.View.extend({
     for (var i = 0; i < input.length; i++) {
       var currentInput = $(input[i]);
       if (currentInput.val() === "") {
-        $(currentInput).addClass('animate shake');
+        $(currentInput).addClass('animated shake');
         noneBlank = false;
         //listens to end of shake animation
         $(currentInput).one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
