@@ -2,7 +2,7 @@ SF Food Truck Finder
 ========
 Find food trucks in San Francisco
 
-http://foodtrucks-sf.herokuapp.com/
+http://find-sf-foodtrucks.herokuapp.com/
 
 ![ScreenShot](/app/assets/images/screenshot.png)
 
@@ -18,6 +18,8 @@ Backend
 
 Notes
 =========
+RoR used for easy deployment and future development of backend.
+
 Data populated from San Francisco Data:
 http://datasf.org
 
