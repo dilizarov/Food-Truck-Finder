@@ -17,7 +17,7 @@ FoodTruckFinder.Views.TruckView = Backbone.View.extend({
     
     google.maps.event.addListener(self.marker, 'mouseover', function () {
       //bounce once
-      self.marker.setAnimation(google.maps.Animation.Bounce);
+      self.marker.setAnimation(google.maps.Animation.BOUNCE);
       self.marker.setAnimation(null);
       
       var content = '<strong>' + self.model.get('applicant') +
@@ -34,7 +34,7 @@ FoodTruckFinder.Views.TruckView = Backbone.View.extend({
     
     //destroy view from our existence. Save memory :)
     google.maps.event.clearListeners(this.map, 'mouseover');
-    this.$el.remoteData().unbind();
+    this.$el.removeData().unbind();
     Backbone.View.prototype.remove.call(this);
   }
   

@@ -25,10 +25,10 @@ FoodTruckFinder.Views.Index = Backbone.View.extend({
   createMap: function() {
     var mapOptions = {
       zoom: 13,
-      center: new google.maps.LatLng(37.7577, -1224376) //SF
+      center: new google.maps.LatLng(37.7577, -122.4376) //SF
     };
     
-    var canvas = $('#map-canvas')//.get(0);
+    var canvas = $('#map-canvas').get(0);
     this.map = new google.maps.Map(canvas, mapOptions);
   },
   
@@ -36,7 +36,7 @@ FoodTruckFinder.Views.Index = Backbone.View.extend({
   searchArea: function() {
     var self = this;
     //Create search box and link to input field
-    var input = $('#address')//.get(0);
+    var input = $('#address').get(0);
     
     var searchBox = new google.maps.places.SearchBox(input);
     // Listen for when user selects item from list. Then retrieve place at the item.
@@ -84,7 +84,7 @@ FoodTruckFinder.Views.Index = Backbone.View.extend({
     this.putFoodTrucksOnMap();
     this.bringUpMap();
     this.displayBackTab();
-  }
+  },
   
   bringUpMap: function() {
     var height = this.container.height() + 1 // +1 for bottom border

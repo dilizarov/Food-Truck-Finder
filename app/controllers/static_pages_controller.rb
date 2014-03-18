@@ -1,5 +1,5 @@
 class StaticPagesController < ApplicationController
   def index
-    rener :index
+    render :index
   end
 end
